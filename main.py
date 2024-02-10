@@ -10,10 +10,10 @@ def address_formatter(address_string):
         # essa será a lista que armarzenará as informações separadas
         address = []
 
-        # essa lista será usada para armazenar as REs buscadas na string
+        # esse dicionário será usado para armazenar as REs buscadas na string
         id_pattern = {
-            'av_pattern': r'\w\D+\s+\b',      # RE para av. ou rua
-            'number_pattern': r'\d+\s*\w*',   # RE para  o número (com ou sem letra)
+            'av_pattern': r'^([\w\s]+?)(?:,| )\s*(\d+[a-zA-Z]*)$',      # RE para av. ou rua
+            'number_pattern': r'^(\d+[a-zA-Z]*),?\s*([\w\s]+)$',   # RE para  o número (com ou sem letra)
         }
 
         # iterando através da lista de REs para separar as informações
