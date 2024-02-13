@@ -12,8 +12,10 @@ def address_formatter(address_string):
 
         # esse dicionário será usado para armazenar as REs buscadas na string
         id_pattern = {
-            'av_pattern': r'^([\w\s]+?)(?:,| )\s*(\d+[a-zA-Z]*)$',      # RE para av. ou rua
-            'number_pattern': r'^(\d+[a-zA-Z]*),?\s*([\w\s]+)$',   # RE para  o número (com ou sem letra)
+            # RE para av. ou rua
+            'av_pattern': r'^\D+\d+(?=\D+\d+$)|[^\W\d][\D\s]{2,}[^\s\W\d]',
+            # RE para  o número (com ou sem letra)
+            'number_pattern': r'No\s?\d+|^\d+\w?\b|\d+\s?\w?\b$',
         }
 
         # iterando através da lista de REs para separar as informações
@@ -26,17 +28,23 @@ def address_formatter(address_string):
         # a função retorna as informações na mesma lista
         return address
     
-
+    # Tratamento para erros da biblioteca "re"
     except re.error as e:
 
         # caso haja algum erro com a RE, ele será informado ao usuário
         print('Erro ao processar expressão regular:', e)
         return
+    
+    # Tratamento para outros erros inesperados
     except Exception as e:
         # caso haja outro tipo de erro, também é informado ao usuário
         print('Ops! Ocorreu um erro inesperado:', e)
         return
     
+# Mensagem de boas vindas autoexplicativa sobre o programa
+print('Boas vindas ao processador/formatador de endereços')
+# Informa ao usuário como quebrar o loop do programa
+print('Você pode sair a qualquer momento digitando "sair"')
 # com uso de um loop, permitimos que o usuário faça quantos inputs quiser
 while True:
     
@@ -47,6 +55,10 @@ while True:
     if not user_input.strip():
         print('Digite informações válidas!')
         continue
+    
+    # quebramos o loop ao receber a palavra sair em caixa alta ou baixa
+    elif user_input.strip().lower() == 'sair':
+        break
 
     # aqui chamamos a função  criada acima, passando o input como parâmetro e recebendo os itens em uma variável
     formatted_address = address_formatter(user_input)
