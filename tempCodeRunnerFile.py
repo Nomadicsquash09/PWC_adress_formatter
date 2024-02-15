@@ -1,2 +1,2 @@
-def close_window(window):
-    window.destroy()
+
+        font=ui_main_title_font_bold,
