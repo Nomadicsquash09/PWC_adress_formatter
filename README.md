@@ -1,6 +1,8 @@
 # Soluções em código
 
-O projeto contém um executável .exe, dentro da pasta *dist* com uma interface gráfica desenvolvida em *python*, que pode ser
+O presente projeto é a solução do desafio de código proposto pela PWC, cujo objetivo era desenvolver um software que recebe um endereço em uma única string e deve retornar nome e número da rua separados. 
+
+O repositório contém um executável .exe, dentro da pasta *dist* com uma interface gráfica desenvolvida em *python*, que pode ser
 executada em qualquer máquina, independendo  do sistema operacional e não sendo necessário a instalação
 de um interpretador *python* na máquina.
 
@@ -10,6 +12,25 @@ de um interpretador *python* na máquina.
 
 > pasta dist: é onde os programas compilados ficam armazenados.
 
+> pasta images: contém as imagens utilizadas neste mesmo arquivo para representar o software.
+
 > pasta src(source): contém o código original e o ambiente virtual, que contém todas as bibliotecas necessárias para rodar as soluções, além de um arquivo 'requirements.txt' por garantia e versatilidade
 
 > pasta test_cases: contém o arquivo de casos de teste ('input_output.pdf')  para facilitar o teste da solução e servir como prévia do resultado esperado.
+
+## Instalação e Requisitos
+
+> O programa foi empacotado com a biblioteca *pyinstaller*, o que faz com que não sejam necessários arquivos ou extensões externas para executar o software.
+
+> Após a instalação dos arquivos, basta buscar a pasta *dist* e executar o arquivo *main.exe* para visualizar as funcionalidades da aplicação.
+
+## Imagens do projeto final
+
+### Caso Simples
+![Caso Simples](images\caso_simples.png)
+
+### Caso mais complexo
+![Caso mais Complexo](images\caso_complexo.png)
+
+### Caso de endereço internacional
+![Caso Internacional](images\caso_internacional.png)

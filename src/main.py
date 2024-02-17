@@ -19,7 +19,7 @@ def address_formatter(address_string):
             # RE para av. ou rua
             'av_pattern': r'^\D+\d+(?=\D+\d+$)|[^\W\d][\D\s]+[^\s\W\d]',
             # RE para  o número (com ou sem letra)
-            'number_pattern': r'(?=\D+\d+)\b[^\W]\D{,3}\b\d+$|^\d+\w?\b|\d+\s?\w?\b$',
+            'number_pattern': r'(?=\D+\d+)\b[^\W]\D{,3}\b\d+(?=\s*$)|^\d+\w?\b|\d+\s?\w?\b(?=\s*$)',
         }
 
         # iterando através da lista de REs para separar as informações
