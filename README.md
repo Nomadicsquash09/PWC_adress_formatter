@@ -27,10 +27,10 @@ de um interpretador *python* na máquina.
 ## Imagens do projeto final
 
 ### Caso Simples
-![Caso Simples](images\caso_simples.png)
+![Caso Simples](https://github.com/Nomadicsquash09/PWC_adress_formatter/blob/main/images/caso_simples.png?raw=True)
 
 ### Caso mais complexo
-![Caso mais Complexo](images\caso_complexo.png)
+![Caso mais Complexo](https://github.com/Nomadicsquash09/PWC_adress_formatter/blob/main/images/caso_complexo.png?raw=True)
 
 ### Caso de endereço internacional
-![Caso Internacional](images\caso_internacional.png)
+![Caso Internacional](https://github.com/Nomadicsquash09/PWC_adress_formatter/blob/main/images/caso_internacional.png?raw=True)
